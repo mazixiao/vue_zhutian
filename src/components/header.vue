@@ -46,7 +46,7 @@
   <div class="right_share">
     <a class="item phone" href="tel:400-820-1717">
         <i class="iconfont icon-dianhua1"></i>
-        <span> 400-820-1717</span>
+        <span>84799023</span>
     </a>
     <a class="item qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1931104552&amp;site=qq&amp;menu=yes">
         <i class="icon iconfont icon-QQ"></i>
