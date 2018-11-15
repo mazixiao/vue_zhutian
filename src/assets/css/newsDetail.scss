@@ -1,0 +1,354 @@
+@charset "UTF-8";
+@import 'public';
+
+
+
+header {
+	display: none !important;
+}
+.header2 {
+	display: block !important;
+}
+
+
+	
+.banner {
+	width: 100%;
+	font-size: 0;
+	margin-top: 83px;
+	img {
+		width: 100%;
+		@include responsive($rs-768) {
+			position: relative;
+			width: 200%;
+			max-width: 200%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.anchor {
+	width: 1400px;
+	margin: 0 auto;
+	border-top: 1px solid #f0d9bb;
+	border-bottom: 1px solid #f0d9bb;
+	font-size: 0;
+	text-align: center;
+	margin-top: 85px;
+	@include responsive($rs-1440) {
+		width: 1200px;
+	}		
+	@include responsive($rs-1280) {
+		width: 1000px;
+	}	
+	@include responsive($rs-1024) {
+		width: 770px;
+		margin-top: 40px;
+	}
+	@include responsive($rs-768) {
+		width: 97%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 10px;
+	}
+	@include responsive($rs-414) {
+		margin-top: 20px;
+	}
+	.item {
+		font-size: 16px;
+		line-height: 30px;
+		display: inline-block;
+		margin-right: 11px;
+		padding: 15px 0;
+		width: 150px;
+		color: #292929;
+		background: #f0d9bb;
+		margin-bottom: -1px;
+		cursor: pointer;
+		-webkit-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+		transition: all 0.4s;
+		@include responsive($rs-1024) {
+			font-size: 14px;
+			line-height: 24px;
+			padding: 10px 0;
+			width: 120px;				
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&.active {
+			background: #c1e0c4;
+			font-weight: bold;
+		}
+		&:hover {
+			background: #c1e0c4;
+			font-weight: bold;
+		}
+	}
+}
+
+.news_detail {
+	width: 1400px;
+	margin: 0 auto;
+	background: #fff8f2;
+	text-align: center;
+	margin-top: 45px;
+	padding-top: 45px;
+	@include responsive($rs-1440) {
+		width: 1200px;
+	}		
+	@include responsive($rs-1280) {
+		width: 1000px;
+	}	
+	@include responsive($rs-1024) {
+		width: 770px;
+	}
+	@include responsive($rs-768) {
+		width: 97%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding-top: 20px;
+		margin-top: 20px;
+	}		
+	.detail_tit {
+		width: 785px;
+		margin: 0 auto;
+	    background: url('../assets/img/newsImg/tit_bg.png');
+	    background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center; 
+		@include responsive($rs-1024) {
+			width: 90%;
+		}
+		@include responsive($rs-640) {
+			width: 95%;
+		}			
+		img {
+			width: 100%;
+		}
+		.texts {
+			padding-top: 20px;
+			padding-bottom: 15px;
+			@include responsive($rs-640) {
+				padding-top: 13px;
+				padding-bottom: 10px;					
+			}
+			width: 90%;
+			margin: 0 auto;
+			.one {
+				font-size: 16px;
+				line-height: 30px;
+				font-weight: bold;
+				@include responsive($rs-1024) {
+					font-size: 14px;
+					line-height: 24px;						
+				}
+				@include responsive($rs-414) {
+					font-size: 12px;
+					line-height: 20px;						
+				}					
+			}
+			.two {
+				font-size: 16px;
+				line-height: 30px;
+				font-weight: bold;
+				@include responsive($rs-1024) {
+					font-size: 14px;
+					line-height: 24px;						
+				}
+				@include responsive($rs-414) {
+					font-size: 12px;
+					line-height: 20px;						
+				}										
+			}				
+		}
+	}
+	.text1 {
+		font-size: 14px;
+		line-height: 30px;
+		color: #666;
+		padding-top: 20px;
+		padding-bottom: 35px;
+		@include responsive($rs-1024) {
+			font-size: 12px;
+			line-height: 22px;
+			padding-top: 20px;
+			padding-bottom: 20px;				
+		}
+	}
+	.text2 {
+		margin-top: -3px;
+		font-size: 14px;
+		line-height: 30px;
+		color: #666;
+		padding-top: 39px;
+		padding-bottom: 37px;
+		background: #f9fcfa;
+		@include responsive($rs-1024) {
+			font-size: 12px;
+			line-height: 22px;
+			padding-top: 20px;
+			padding-bottom: 20px;				
+		}			
+	}	
+	.text3 {
+		font-size: 14px;
+		line-height: 30px;
+		color: #666;
+		padding-top: 39px;
+		padding-bottom: 93px;
+		@include responsive($rs-1024) {
+			font-size: 12px;
+			line-height: 22px;
+			padding-top: 20px;
+			padding-bottom: 40px;				
+		}
+		.strong {
+			font-weight: bold;
+			color: #333;
+		}
+		.size16 {
+			font-size: 16px;
+			color: #333;
+			@include responsive($rs-1024) {
+				font-size: 14px;
+			}
+		}			
+	}	
+}
+
+
+.newsDetail2 {
+	width: 1200px;
+	margin: 0 auto;
+	.item {
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 30px;
+		.tit_s {
+			font-size: 18px;
+			color: #02cfd4;
+			font-weight: 400;
+			line-height: 30px;
+			margin-bottom: 15px;
+			display: inline-block;
+		}
+		.introduct {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 14px;
+			line-height: 26px;
+			margin-bottom: 10px;
+		}
+		.img {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 0;
+			width: 100%;
+			// border-top: 4px solid #fff;
+			// border-left: 4px solid #fff;
+			a {
+				display: inline-block;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 20%;
+				height: 200px;
+				box-sizing: border-box;
+				border-right: 4px solid #fff;
+				border-bottom: 4px solid #fff;
+			}
+		}
+		.source {
+			color: #ababab;
+			text-align: right;
+			font-size: 14px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			.time {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 8px;
+			}
+			.author {
+				display: inline-block;
+				vertical-align: top;
+			}			
+		}
+	}
+}
+
+.more {
+	text-align: center;
+	margin-top: 17px;
+	margin-bottom: 30px;
+	a {
+		font-size: 14px;
+		padding: 6.5px 44px;
+		display: inline-block;
+		background: #c1e0c4;
+		border-radius: 22px;
+		border: 1px solid #c1e0c4;
+		-webkit-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		transition: all 0.5s;
+		@include responsive($rs-1024) {
+			font-size: 12px;
+			padding: 3px 25px;
+			display: inline-block;
+			border-radius: 20px;							
+		}				
+		span {
+			color: #333;
+			height: 30px;
+			line-height: 30px;
+			vertical-align: middle;
+			display: inline-block;
+			margin-right: 10px;
+			-webkit-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			transition: all 0.5s;
+		}
+		i {
+			color: #333;
+			height: 24px;
+			line-height: 22px;
+			vertical-align: middle;
+			display: inline-block;
+			-webkit-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			transition: all 0.5s;
+		}
+		&:hover {
+			background: #f0d9bb;
+			border: 1px solid #f0d9bb;
+		}						
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
