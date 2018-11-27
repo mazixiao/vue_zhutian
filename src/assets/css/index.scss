@@ -7,6 +7,7 @@
   .swiper1 {
     overflow: hidden;
     width: 100%;
+    font-size: 0;
     .swiper-slide {
       width: 100%;
       img {
@@ -204,7 +205,7 @@
     height: 50px;
     position: absolute;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -19px;
     bottom: 50px;
     z-index: 2;
     cursor: pointer;

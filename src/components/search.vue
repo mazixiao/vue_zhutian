@@ -35,7 +35,7 @@
 						<div class="round">
 							<div class="round_con">{{item.introduct}}</div>
 						</div>
-						<pre class="small_introduct">{{item.text}}</pre>
+						<div class="small_introduct" v-html='item.text'></div>
 					</div>
 				</div>
 			</div>

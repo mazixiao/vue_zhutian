@@ -68,7 +68,7 @@
 								<div class="round">
 									<div class="round_con">{{item[1]}}</div>
 								</div>
-								<pre class="small_introduct">{{item[2]}}</pre>
+								<div class="small_introduct" v-html='item[2]'></div>
 							</div>
 						</div>
 					</div>     

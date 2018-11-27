@@ -35,10 +35,11 @@
             <img src="../assets/img/commonImg/logo2.png" alt="">
             <p class="text">煮田农场</p>
         </a>
-        <div class="language2">
+        <!-- 语言切换 -->
+ <!--        <div class="language2">
             <i class="icon iconfont icon-diqiu"></i>
             <span>EN</span>
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -46,7 +47,7 @@
   <div class="right_share">
     <a class="item phone" href="tel:84799023">
         <i class="iconfont icon-dianhua1"></i>
-        <span style='color:red'>111111111周五啊</span>
+        <span>84799023</span>
     </a>
     <a class="item qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1931104552&amp;site=qq&amp;menu=yes">
         <i class="icon iconfont icon-QQ"></i>

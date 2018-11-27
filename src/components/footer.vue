@@ -42,7 +42,6 @@
                 </div>
                 <div class="copyright">
                     <span>Copyright ©2018 &nbsp;   上海美哚餐饮有限公司 版权所有 &nbsp;  <a class="wailian" href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备xxxxxxxx号</a></span>
-                    <span>Powered by <a href="http://www.manro.com.cn/" target="_blank">MANRO</a></span>
                 </div>
             </div>
         </footer>

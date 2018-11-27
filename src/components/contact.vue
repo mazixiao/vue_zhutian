@@ -33,14 +33,14 @@
 					</div>
 					<div class="list_con">
 						<div class="list">
-							<pre class="texts">{{item.one.text1}}</pre>
+							<div class="texts" v-html='item.one.text1'></div>
 							<div class="round">
 								<span class="sicircle"></span>
 								<div class="text">{{item.one.text2}}</div>
 							</div>
 						</div>
 						<div class="list">
-							<pre class="texts">{{item.two.text1}}</pre>
+							<div class="texts" v-html='item.two.text1'></div>
 							<div class="round">
 								<span class="sicircle"></span>
 								<div class="text">{{item.two.text2}}</div>
@@ -90,7 +90,7 @@
 						<td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left" class="selectTdClass">
 							<p style="white-space: normal; text-align: left;">
 								<span style="font-family: 黑体, SimHei; font-size: 18px;">
-								阿香集团品牌品质加盟电话：400-820-1717&nbsp; &nbsp; &nbsp;&nbsp;
+								阿香集团品牌品质加盟电话：84799023&nbsp; &nbsp; &nbsp;&nbsp;
 								</span>
 							</p>
 						</td>
