@@ -30,3 +30,11 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+安装node_moduls过程有些插件会安装不上报错，安装下面几个即可
+
+npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
+
+npm install node-sass
+
+npm install sass-loader
