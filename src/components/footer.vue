@@ -55,6 +55,7 @@ export default {
       footer_navs: [
         {title: '招商加盟', path: '/join'},
         {title: '关于煮田', path: '/about'},
+        {title: '煮田美食', path: '/food'},
         {title: '最新资讯', path: '/news'},
         {title: '门店查询', path: '/search'},
         {title: '联系我们', path: '/contact'}
