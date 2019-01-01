@@ -175,8 +175,6 @@ export default {
         this.videoShow = !this.videoShow;
         this.playerOptions.autoplay = !this.playerOptions.autoplay;
     },  
-
-
       // 点击tab跳至对应位置
       anchor1() {
         var zhutian_introduct = document.querySelector(".zhutian_introduct").offsetTop;

@@ -59,9 +59,16 @@ const originalConfig = {
         options: vueLoaderConfig
       },
       {
+        // js语法高版本转低版本
+        // 转义resolve里的文件
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        include: [
+        resolve('src'), 
+        resolve('test'),
+        resolve('node_modules/swiper/dist'), 
+        resolve('node_modules/dom7'), 
+        resolve('node_modules/webpack-dev-server/client')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

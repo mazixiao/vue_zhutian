@@ -8,7 +8,7 @@
     }],
     "stage-2"
   ],
-  "plugins": ["transform-vue-jsx", "transform-runtime", "transform-es2015-arrow-functions"],
+  "plugins": ["transform-vue-jsx", "transform-remove-strict-mode",  "transform-runtime", "transform-es2015-arrow-functions"],
   "env": {
     "test": {
       "presets": ["env", "stage-2"],

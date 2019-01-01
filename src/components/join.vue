@@ -44,7 +44,7 @@
 				<div class="border">  
 					<div class="text">
 						<div class="one">{{item[1]}}</div>
-						<pre class="two">{{item[2]}}</pre>
+						<div class="two" v-html='item[2]'></div>
 					</div>
 				</div>
 			</div>   
@@ -132,10 +132,10 @@
 				<li class="item" v-for='(item, index) in flow.con'>
 					<div class="item_con" v-if='index % 2 == 0'>
 						<div class="one">{{item[0]}}</div>
-						<pre class="two">{{item[1]}}</pre>
+						<div class="two" v-html='item[1]'></div>
 					</div>
 					<div class="item_con" v-else>
-						<pre class="two">{{item[1]}}</pre>
+						<div class="two" v-html='item[1]'></div>
 						<div class="one">{{item[0]}}</div>
 					</div>				
 				</li>
@@ -149,7 +149,7 @@
 			<div class="con_tit_con">{{brand.title}}</div>
 		</div>
 		<div class="brand_con">
-			<pre class="item" v-for='(item, index) in brand.brand_con'>{{item}}</pre>
+			<div class="item" v-for='(item, index) in brand.brand_con' v-html='item'></div>
 		</div>
 	</div>
 
