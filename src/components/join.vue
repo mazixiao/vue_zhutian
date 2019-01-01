@@ -1,6 +1,6 @@
 
 <style lang="sass">  
-  @import '../assets/css/join.scss';
+  @import '../assets/scss/join.scss';
 </style>
 
 

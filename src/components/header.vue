@@ -1,7 +1,7 @@
 
 <!-- <style scoped lang="sass">     -->
 <style lang="sass">
-  @import '../assets/css/common.scss';
+  @import '../assets/scss/common.scss';
 </style>
 <template>
 

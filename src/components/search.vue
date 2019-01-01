@@ -1,6 +1,6 @@
 
 <style lang="sass">  
-  @import '../assets/css/search.scss';
+  @import '../assets/scss/search.scss';
 </style>
 
 

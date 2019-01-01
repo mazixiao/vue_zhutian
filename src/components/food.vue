@@ -1,6 +1,6 @@
 
 <style lang="sass">  
-  @import '../assets/css/food.scss';
+  @import '../assets/scss/food.scss';
 </style>
 
 

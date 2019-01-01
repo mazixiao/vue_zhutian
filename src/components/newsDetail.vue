@@ -1,6 +1,6 @@
 
 <style lang="sass">
-  @import '../assets/css/newsDetail.scss';
+  @import '../assets/scss/newsDetail.scss';
 </style>
 
 <template>

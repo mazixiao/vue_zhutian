@@ -27,7 +27,7 @@ const originalConfig = {
   context: path.resolve(__dirname, '../'),
   // 指定项目的入口文件
   entry: {
-    app: ["babel-polyfill", "./src/main.js"]
+    app: ["./src/main.js"]
   },
   // 项目的输出配置
   output: {
