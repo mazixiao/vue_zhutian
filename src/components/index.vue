@@ -111,7 +111,7 @@
         搭配酥肉、糍粑等小吃及特质饮品及樱花冰粉，新鲜制作，打造轻食健康麻辣烫。                
       </div>
     </div>
-    <div class="tab">
+    <div class="tab-index">
       <div class="tab_tit">
         <div class="item" @click='tab(index)' v-for='(item, index) in tabss["tab_tit"]' :class='{active:index == tabHighlight}'>
           {{item}}

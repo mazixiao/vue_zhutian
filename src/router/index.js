@@ -79,7 +79,7 @@ export default new Router({
     }             
   ],
   //默认是hash模式
-  // mode:'history',
+  mode:'history',
   //因为导航高亮的类默认是active
   linkActiveClass:'active',  
   scrollBehavior (to, from, savedPosition) {
