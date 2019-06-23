@@ -46,6 +46,7 @@ export default {
       })
       .catch((error) => {
         console.log(error);
+        alert(error);
       });
     },
     // 点击按钮发送ajax
