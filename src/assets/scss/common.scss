@@ -151,7 +151,10 @@ header {
     }
     @include responsive($rs-1440) {
       margin-left: 13%;
-    }   
+    } 
+    @include responsive($rs-1366) {
+      margin-left: 21%;
+    }  
     .nav2 {
       font-size: 0;
       display: inline-block;
@@ -162,6 +165,9 @@ header {
         position: relative;
         &:nth-child(3) {
           margin-right: 250px;
+          @include responsive($rs-1366) {
+            margin-right: 200px;
+          }
           @include responsive($rs-1280) {
             margin-right: 220px;
           }
@@ -186,10 +192,10 @@ header {
             padding: 25px 0;
           }
           @include responsive($rs-1366) {
-            margin-right: 40px;
+            margin-right: 0px;
           } 
           @include responsive($rs-1280) {
-            margin-right: 30px;
+            // margin-right: 30px;
           }     
           @include responsive($rs-1024) {
             font-size: 12px;
@@ -219,26 +225,24 @@ header {
           position: absolute;
           background-color: #fff;
           width: 100%;
-          top: 100px;
+          top: 80px;
           left: 0;
           padding: 10px 0;
-          // display: none;
-          &:before {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 9px;
-            left: 0;
-            top: -9px;
-          }
+          display: none;
           .second-item {
             font-size: 16px;
             line-height: 30px;
             color: #000;
             display: block;
             &.router-link-exact-active {
-              background-color: red;
+              background-color: #4d7435;
+              color: #fff;
             }
+          }
+        }
+        &:hover {
+          .second-parent {
+            display: block;
           }
         }
       }

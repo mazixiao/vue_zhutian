@@ -8,7 +8,7 @@
 	}
 
 	.about-item1-con {
-		height: 50vh;
+		height: 80vh;
 		margin-top: 100px;
 	}
 </style>
