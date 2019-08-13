@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import index from '@/components/index'
 import join from '@/components/join'
 import about from '@/components/about'
+import aboutItem1 from '@/components/about-item1'
+import aboutItem2 from '@/components/about-item2'
 import food from '@/components/food'
 import news from '@/components/news'
 import newsDetail from '@/components/newsDetail'
@@ -27,7 +29,7 @@ export default new Router({
       component: join,
       meta: {
         title: '招商加盟'
-      }      
+      }  
     },
     {
       path: '/about',
@@ -35,6 +37,24 @@ export default new Router({
       component: about,
       meta: {
         title: '关于煮田'
+      },
+
+    },
+    {
+      path: '/about/about-item1',
+      name: 'about-item1',
+      component: aboutItem1,
+      meta: {
+        title: '关于煮田1'
+      }      
+    }, 
+
+    {
+      path: '/about/about-item2',
+      name: 'about-item2',
+      component: aboutItem2,
+      meta: {
+        title: '关于煮田2'
       }      
     },
     {

@@ -36,25 +36,64 @@ header {
 			// background: yellow;
 			font-size: 0;
 			margin-top: 42px;
-			.item {
-				font-size: 16px;
-				margin-right: 8%;
-				color: #fff;
-				transition: all 0.5s;
-				&:last-child {
-					margin-right: 0;
-				}
+      .item-parent {
+        margin-right: 2%;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        &:last-child {
+          margin-right: 0;
+        }
         &.active {
-          color: #507638;
+          .item {
+            color: #507638;
+          }
         }  
         &.router-link-active {
-          color: red;
+          .item {
+            color: red;
+          }
+        }
+        &:hover {
+          .item {
+            color: #507638;
+          }
+          .second-parent {
+            display: block;
+          }
+        }
+        .item {
+          display: inline-block;
+          font-size: 16px;
+          color: #fff;
+          transition: all 0.5s;
+          width: 100px;
+        }
+        .second-parent {
+          position: absolute;
+          background-color: #fff;
+          width: 100%;
+          top: 30px;
+          left: 0;
+          padding: 10px 0;
+          display: none;
+          &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 9px;
+            left: 0;
+            top: -9px;
+          }
+          .second-item {
+            font-size: 16px;
+            line-height: 30px;
+            color: #000;
+            display: block;
+          }
         }
 
-				&:hover {
-					color: #507638;
-				}
-			}
+      }
 		}
 		.language {
 			display: inline-block;
@@ -117,51 +156,10 @@ header {
       font-size: 0;
       display: inline-block;
       vertical-align: top;
-      .item {
-        vertical-align: top;
-        padding: 35px 0;
-        width: 100px;
-        text-align: center;
+      .item-parent {
         display: inline-block;
-        font-size: 16px;
-        line-height: 30px;
-        background: url('../assets/img/commonImg/tit_hover.jpg') 0 0 no-repeat;
-        -o-background-size: 100% 0;
-        background-size: 100% 0;
-        margin-right: 54px;
-        color: #333;
-        @include responsive($rs-1440) {
-          padding: 25px 0;
-        }
-        @include responsive($rs-1366) {
-          margin-right: 40px;
-        } 
-        @include responsive($rs-1280) {
-          margin-right: 30px;
-        }     
-        @include responsive($rs-1024) {
-          font-size: 12px;
-          width: 80px;
-          margin-right: 20px;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-        &:hover {
-        -o-background-size: cover;
-        background-size: cover;
-          color: #fff;
-        }
-        &.active {
-          -o-background-size: cover;
-          background-size: cover;
-          color: #fff;
-        }
-        &.router-link-active {
-          -o-background-size: cover;
-          background-size: cover;
-          color: #fff;
-        }
+        vertical-align: top;
+        position: relative;
         &:nth-child(3) {
           margin-right: 250px;
           @include responsive($rs-1280) {
@@ -171,7 +169,80 @@ header {
             margin-right: 190px;
           }
         }
+        .item {
+          vertical-align: top;
+          padding: 35px 0;
+          width: 100px;
+          text-align: center;
+          display: inline-block;
+          font-size: 16px;
+          line-height: 30px;
+          background: url('../assets/img/commonImg/tit_hover.jpg') 0 0 no-repeat;
+          -o-background-size: 100% 0;
+          background-size: 100% 0;
+          margin-right: 54px;
+          color: #333;
+          @include responsive($rs-1440) {
+            padding: 25px 0;
+          }
+          @include responsive($rs-1366) {
+            margin-right: 40px;
+          } 
+          @include responsive($rs-1280) {
+            margin-right: 30px;
+          }     
+          @include responsive($rs-1024) {
+            font-size: 12px;
+            width: 80px;
+            margin-right: 20px;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+          -o-background-size: cover;
+          background-size: cover;
+            color: #fff;
+          }
+          &.active {
+            -o-background-size: cover;
+            background-size: cover;
+            color: #fff;
+          }
+          &.router-link-active {
+            -o-background-size: cover;
+            background-size: cover;
+            color: #fff;
+          }
+        }        
+        .second-parent {
+          position: absolute;
+          background-color: #fff;
+          width: 100%;
+          top: 100px;
+          left: 0;
+          padding: 10px 0;
+          // display: none;
+          &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 9px;
+            left: 0;
+            top: -9px;
+          }
+          .second-item {
+            font-size: 16px;
+            line-height: 30px;
+            color: #000;
+            display: block;
+            &.router-link-exact-active {
+              background-color: red;
+            }
+          }
+        }
       }
+
     }
     .logo2 {
       position: absolute;

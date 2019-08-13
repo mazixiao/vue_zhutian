@@ -165,13 +165,15 @@ export default {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    // 自动播放
-    autoplay: {
-      delay: 3000,
-      stopOnLastSlide: false,
-      // 当设置为false时，用户操作之后autoplay不会被禁掉
-      disableOnInteraction: false,
-    },
+    
+    // // 自动播放
+    // autoplay: {
+    //   delay: 3000,
+    //   stopOnLastSlide: false,
+    //   // 当设置为false时，用户操作之后autoplay不会被禁掉
+    //   disableOnInteraction: false,
+    // },
+
     // 分页器
     pagination: {
       el: '.swiper-pagination',

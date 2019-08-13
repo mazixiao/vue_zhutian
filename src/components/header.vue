@@ -12,9 +12,16 @@
         <img src="../assets/img/commonImg/logo.png" alt="">dsdsd
       </a>
     <div class="navs fl">
-      <router-link v-for='(item, index) in navs' class="item" :to="{ path: item['path']}"  :key='index'>
-        {{item['title']}}
-      </router-link>
+      <div class="item-parent" v-for='(item, index) in navs'>
+        <router-link  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
+        {{item['stair']['title']}}
+        </router-link>
+        <div class="second-parent" v-if="item.second">
+          <router-link class="second-item" v-for='(second, index2) in item.second' :to="{ path: second['path']}" :key='index2'>
+          {{second['title']}}
+          </router-link> 
+        </div>
+      </div>
     </div>
 
       <a class='language fr' href="javascript:;">
@@ -27,9 +34,21 @@
 <div class="header2">
     <div class="header_con2">
       <div class="nav2">
-        <router-link v-for='(item, index) in navs' class="item" :to="{ path: item['path']}"  :key='index'>
-          {{item['title']}}
+<!--         <router-link v-for='(item, index) in navs' class="item" :to="{ path: item['stair']['path']}"  :key='index'>
+          {{item['stair']['title']}}
+        </router-link> -->
+
+      <div class="item-parent" v-for='(item, index) in navs'>
+        <router-link  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
+        {{item['stair']['title']}}
         </router-link>
+        <div class="second-parent" v-if="item.second">
+          <router-link class="second-item" v-for='(second, index2) in item.second' :to="{ path: second['path']}" :key='index2'>
+          {{second['title']}}
+          </router-link> 
+        </div>
+      </div>
+        
       </div>
         <a class="logo2" href="/">
             <img src="../assets/img/commonImg/logo2.png" alt="">
@@ -73,15 +92,47 @@ export default {
   data () {
     return {
       navs: [
-        {title: '招商加盟', path: '/join'},
-        {title: '关于煮田', path: '/about'},
-        {title: '煮田美食', path: '/food'},
-        {title: '最新资讯', path: '/news'},
-        {title: '门店查询', path: '/search'},
-        {title: '联系我们', path: '/contact'}
+        // {title: '招商加盟2', path: '/join'},
+        // {title: '关于煮田', path: '/about'},
+        // {title: '煮田美食', path: '/food'},
+        // {title: '最新资讯', path: '/news'},
+        // {title: '门店查询', path: '/search'},
+        // {title: '联系我们', path: '/contact'}
+        
+        {
+          stair: {title: '招商加盟', path: '/join'},
+        },
+
+        {
+          stair: {title: '关于煮田', path: '/about'},
+          second: [
+            {title: '关于煮田1', path: '/about/about-item1'},
+            {title: '关于煮田2', path: '/about/about-item2'},
+          ]
+        },
+
+        {
+          stair: {title: '煮田美食', path: '/food'},
+        },
+
+        {
+          stair: {title: '最新资讯', path: '/news'},
+        },
+
+        {
+          stair: {title: '门店查询', path: '/search'},
+        },
+
+        {
+          stair: {title: '联系我们', path: '/contact'},
+        },
+
       ]
     }
   },
+
+// stair
+// second
   props: {
     // 此数据是控制动画快慢的
     step: {   
@@ -90,7 +141,7 @@ export default {
     }
   },
   mounted () {
-
+    console.log(this.$router.options.routes);
   },
   methods:{
     toTop (step) {
