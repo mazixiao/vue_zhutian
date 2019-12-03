@@ -1,6 +1,6 @@
 
 
-import commonHeader from '../../components/header'; 
+import commonHeader2 from '../../components/header2'; 
 import commonFooter from '../../components/footer'; 
 
 import video_img from '../img/aboutImg/video.jpg';
@@ -19,7 +19,7 @@ import swiper3 from '../img/aboutImg/swiper3.jpg';
 export default {
   name: 'about',
   components: {
-    commonHeader,
+    commonHeader2,
     commonFooter,
   },  
   data () {

@@ -19,8 +19,9 @@ import VideoPlayer from 'vue-video-player'
 require('video.js/dist/video-js.css')
 require('vue-video-player/src/custom-theme.css')
 Vue.use(VideoPlayer)
-
-
+// wow
+import {WOW} from 'wowjs'
+import 'animate.css'
 
 // ajax
 import axios from 'axios'

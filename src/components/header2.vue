@@ -6,12 +6,13 @@
 <template>
 
 <div class='header'>
-  <header>
-    <div class="header_con clearfix">
-      <a class='logo fl' href='/'>
-        <img src="../assets/img/commonImg/logo.png" alt="">dsdsd
-      </a>
-    <div class="navs fl">
+<div class="header2">
+    <div class="header_con2">
+      <div class="nav2">
+<!--         <router-link v-for='(item, index) in navs' class="item" :to="{ path: item['stair']['path']}"  :key='index'>
+          {{item['stair']['title']}}
+        </router-link> -->
+
       <div class="item-parent" v-for='(item, index) in navs'>
         <router-link  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
         {{item['stair']['title']}}
@@ -22,16 +23,19 @@
           </router-link> 
         </div>
       </div>
+        
+      </div>
+        <a class="logo2" href="/">
+            <img src="../assets/img/commonImg/logo2.png" alt="">
+            <p class="text">煮田农场</p>
+        </a>
+        <!-- 语言切换 -->
+ <!--        <div class="language2">
+            <i class="icon iconfont icon-diqiu"></i>
+            <span>EN</span>
+        </div> -->
     </div>
-
-      <a class='language fr' href="javascript:;">
-        <i class="iconfont icon-diqiu"></i>
-        <span class='languages'>EN</span>
-      </a>
-    </div>
-  </header>
-
-
+</div>
 
   <!-- 右面固定信息 -->
   <div class="right_share">
@@ -59,7 +63,7 @@
 </template>
 <script>
 export default {
-  name: 'commonHeader',
+  name: 'commonHeader2',
   data () {
     return {
       navs: [

@@ -77,7 +77,7 @@
       <div class="con_tit_con">加盟优势</div>
     </div>
     <div class="item_con">
-      <div class="item" v-for='item in join'>
+      <div class="item wow fadeInUp" v-for='item in join'>
         <div class="img">
           <img :src="item[0][0]" alt="">
           <img :src="item[0][1]" alt="">
