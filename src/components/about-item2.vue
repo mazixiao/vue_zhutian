@@ -1,11 +1,5 @@
 
 <style> 
-	header {
-		display: none !important;
-	}
-	.header2 {
-		display: block !important;
-	}
 
 	.about-item1-con {
 		height: 80vh;
@@ -17,7 +11,7 @@
 <template>
 <div class='about-item2'>
   <!-- 公共头部 -->
-  <commonHeader></commonHeader>
+  <commonHeader2></commonHeader2>
 
 
 <div class="about-item1-con">
@@ -39,12 +33,12 @@
 
 <script>
 
-import commonHeader from './header'; 
+import commonHeader2 from './header2'; 
 import commonFooter from './footer'; 
 export default {
   name: 'aboutItem2',
   components: {
-    commonHeader,
+    commonHeader2,
     commonFooter
   },   
   data () {

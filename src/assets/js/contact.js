@@ -1,13 +1,13 @@
 
 
-import commonHeader from '../../components/header'; 
+import commonHeader2 from '../../components/header2'; 
 import commonFooter from '../../components/footer'; 
 
 
 export default {
   name: 'contact',
   components: {
-    commonHeader,
+    commonHeader2,
     commonFooter,
   },  
   data () {

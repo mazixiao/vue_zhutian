@@ -4,6 +4,7 @@ import commonFooter from '../../components/footer';
 
 
 import Swiper from 'swiper';
+import {WOW} from 'wowjs';
 // 首页轮播图图片
 import swiper1 from '../img/indexImg/swiper1.jpg';
 import swiper2 from '../img/indexImg/swiper2.jpg';
@@ -44,8 +45,27 @@ export default {
   components: {
     commonHeader,
     commonFooter,
-    XImg 
+    XImg,
+
+
+    props: ['join'],
+    watch: {
+      cases() {
+        this.$nextTick(() => { // 在dom渲染完后,再执行动画
+          var wow = new WOW({
+            live: false
+          })
+          wow.init()
+        })
+      }
+    }
+
   },  
+
+
+
+
+
   data () {
     return {
       // 视频插件参数
@@ -155,6 +175,9 @@ export default {
   }, 
 
   mounted(){
+    new WOW().init(),
+
+
     new Swiper ('.swiper1', {
     // effect : 'fade',
     loop: true,

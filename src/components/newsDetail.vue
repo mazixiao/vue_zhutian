@@ -5,7 +5,7 @@
 
 <template>
 <div class='newsDetail'>
-	<commonHeader></commonHeader>
+	<commonHeader2></commonHeader2>
 
 	<div class="banner">
 		<img src="../assets/img/newsImg/banner.jpg" alt="">

@@ -7,7 +7,8 @@
 <template>
 <div class='join'>
   <!-- 公共头部 -->
-  <commonHeader></commonHeader>
+  <!-- <commonHeader></commonHeader> -->
+  <commonHeader2></commonHeader2>
 
 	<div class="banner">
 	    <img src="../assets/img/joinImg/banner.jpg" alt="">
