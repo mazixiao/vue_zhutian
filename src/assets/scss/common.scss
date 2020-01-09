@@ -233,7 +233,7 @@ header {
             line-height: 30px;
             color: #000;
             display: block;
-            &.router-link-exact-active {
+            &:hover, &.router-link-exact-active {
               background-color: #4d7435;
               color: #fff;
             }

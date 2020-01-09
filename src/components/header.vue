@@ -13,7 +13,7 @@
       </a>
     <div class="navs fl">
       <div class="item-parent" v-for='(item, index) in navs'>
-        <router-link  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
+        <router-link @click="selectedMenu(index)"  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
         {{item['stair']['title']}}
         </router-link>
         <div class="second-parent" v-if="item.second">
@@ -62,6 +62,7 @@ export default {
   name: 'commonHeader',
   data () {
     return {
+      is_selected: 0,
       navs: [
         // {title: '招商加盟2', path: '/join'},
         // {title: '关于煮田', path: '/about'},
@@ -77,8 +78,8 @@ export default {
         {
           stair: {title: '关于煮田', path: '/about'},
           second: [
-            {title: '关于煮田1', path: '/about/about-item1'},
-            {title: '关于煮田2', path: '/about/about-item2'},
+            {title: '煮田简介', path: '/about/about-introduct?index=0'},
+            {title: '门店形象', path: '/about/about-shop?index=1'},
           ]
         },
 
@@ -125,6 +126,11 @@ export default {
       }
     },   
   }, 
+      // 点击一级菜单切换样式
+      selectedMenu(index) {
+        this.is_selected = index
+      }
+
   }
 
 </script>

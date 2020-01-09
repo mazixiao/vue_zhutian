@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import index from '@/components/index'
 import join from '@/components/join'
 import about from '@/components/about'
-import aboutItem1 from '@/components/about-item1'
-import aboutItem2 from '@/components/about-item2'
+import aboutIntroduct from '@/components/about-introduct'
+import aboutShop from '@/components/about-shop'
 import food from '@/components/food'
 import news from '@/components/news'
 import newsDetail from '@/components/newsDetail'
@@ -38,25 +38,30 @@ export default new Router({
       meta: {
         title: '关于煮田'
       },
+      children: [
+        {
+          path: '/about/about-introduct',
+          name: 'about-introduct',
+          component: aboutIntroduct,
+          meta: {
+            title: '煮田简介'
+          }      
+        }, 
+
+        {
+          path: '/about/about-shop',
+          name: 'about-shop',
+          component: aboutShop,
+          meta: {
+            title: '门店形象'
+          }      
+        }
+
+      ]
+
 
     },
-    {
-      path: '/about/about-item1',
-      name: 'about-item1',
-      component: aboutItem1,
-      meta: {
-        title: '关于煮田1'
-      }      
-    }, 
 
-    {
-      path: '/about/about-item2',
-      name: 'about-item2',
-      component: aboutItem2,
-      meta: {
-        title: '关于煮田2'
-      }      
-    },
     {
       path: '/food',
       name: 'food',

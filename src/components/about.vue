@@ -12,12 +12,25 @@
 	<div class="banner">
 	    <img src="../assets/img/aboutImg/banner.jpg" alt="">
 	</div>
+
+
 	<div class="anchor">
-	    <div :class="{item:true, introduct:true, active: anchor_active1}" @click='anchor1()'>{{anchor.tit1}}</div>
-	    <div :class="{item:true, shop:true, active: anchor_active2}" @click='anchor2()'>{{anchor.tit2}}</div>
+	    <div :class="{item:true, active: index === 0}" @click="switchTitle(0)" >煮田简介</div>
+	    <div :class="{item:true, active: index === 1}" @click="switchTitle(1)" >门店形象</div>
 	</div>
 
-	<div class="zhutian_introduct">
+<!--         <span :class="{isActive: index === 0}" @click="switchTitle(0)">月嫂/育婴师培训</span>
+        <span :class="{isActive: index === 1}" @click="switchTitle(1)">小儿推拿师培训</span> -->
+
+	<router-view></router-view>
+
+
+<!-- 	<div class="anchor">
+	    <div :class="{item:true, introduct:true, active: anchor_active1}" @click='anchor1()'>{{anchor.tit1}}</div>
+	    <div :class="{item:true, shop:true, active: anchor_active2}" @click='anchor2()'>{{anchor.tit2}}</div>
+	</div> -->
+
+<!-- 	<div class="zhutian_introduct">
 		<div class="con_tit_s">
 			<div class="con_tit_con">{{zhutian_introduct.title}}</div>
 		</div> 
@@ -49,10 +62,10 @@
 	    <img @click='controlVideo()' class="video_close" src="../assets/img/indexImg/video_close3.png" alt="">    
 	  </div>
 	  <div @click="controlVideo()" class="video_shadow"></div>  
-	</div>
+	</div> -->
 
 
-
+<!-- 
 	<div class="shop_show">
 		<div class="shop_show_con">
 			<div class="con_tit_s">
@@ -75,7 +88,7 @@
 				</div>   
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 <commonFooter></commonFooter>  
 </div>
