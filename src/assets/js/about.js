@@ -23,9 +23,26 @@ export default {
   }, 
 
   mounted(){
+    
+    if(this.$route.query.index) {
+      this.index = Number(this.$route.query.index);
+    } else {
+      this.index = this.index;
+    }
 
+   
+  },
+
+  created() {
+
+    if(this.$route.query.index) {
+      this.index = Number(this.$route.query.index);
+    } else {
+      this.index = this.index;
+    }
 
   },
+
   methods:{
      
       switchTitle(v) {

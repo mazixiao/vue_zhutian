@@ -76,7 +76,7 @@ header {
           top: 30px;
           left: 0;
           padding: 10px 0;
-          display: none;
+          // display: none;
           &:before {
             position: absolute;
             content: '';
@@ -90,6 +90,10 @@ header {
             line-height: 30px;
             color: #000;
             display: block;
+            &:hover {
+              background-color: #4d7435;
+              color: #fff;
+            }
           }
         }
 
@@ -227,7 +231,7 @@ header {
           top: 80px;
           left: 0;
           padding: 10px 0;
-          display: none;
+          // display: none;
           .second-item {
             font-size: 16px;
             line-height: 30px;
