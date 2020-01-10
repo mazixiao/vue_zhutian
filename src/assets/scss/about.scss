@@ -77,12 +77,14 @@
 			margin-right: 0;
 		}
 		&.active {
-			background: #c1e0c4;
+			background: green;
 			font-weight: bold;
+			color: #fff;
 		}
 		&:hover {
-			background: #c1e0c4;
+			background: green;
 			font-weight: bold;
+			color: #fff;
 		}
 	}
 }

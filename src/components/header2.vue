@@ -9,31 +9,21 @@
 <div class="header2">
     <div class="header_con2">
       <div class="nav2">
-<!--         <router-link v-for='(item, index) in navs' class="item" :to="{ path: item['stair']['path']}"  :key='index'>
+        <div class="item-parent" v-for='(item, index) in navs'>
+          <router-link  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
           {{item['stair']['title']}}
-        </router-link> -->
-
-      <div class="item-parent" v-for='(item, index) in navs'>
-        <router-link @click="selectedMenu(index)"  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
-        {{item['stair']['title']}}
-        </router-link>
-        <div class="second-parent" v-if="item.second">
-          <router-link class="second-item" v-for='(second, index2) in item.second' :to="{ path: second['path']}" :key='index2'>
-          {{second['title']}}
-          </router-link> 
+          </router-link>
+          <div class="second-parent" v-if="item.second">
+            <router-link class="second-item" v-for='(second, index2) in item.second' :to="{ path: second['path']}" :key='index2'>
+            {{second['title']}}
+            </router-link> 
+          </div>
         </div>
-      </div>
-        
       </div>
         <a class="logo2" href="/">
             <img src="../assets/img/commonImg/logo2.png" alt="">
             <p class="text">煮田农场</p>
         </a>
-        <!-- 语言切换 -->
- <!--        <div class="language2">
-            <i class="icon iconfont icon-diqiu"></i>
-            <span>EN</span>
-        </div> -->
     </div>
 </div>
 
@@ -66,21 +56,14 @@ export default {
   name: 'commonHeader2',
   data () {
     return {
-      is_selected: 0,
       navs: [
-        // {title: '招商加盟2', path: '/join'},
-        // {title: '关于煮田', path: '/about'},
-        // {title: '煮田美食', path: '/food'},
-        // {title: '最新资讯', path: '/news'},
-        // {title: '门店查询', path: '/search'},
-        // {title: '联系我们', path: '/contact'}
-        
+
         {
           stair: {title: '招商加盟', path: '/join'},
         },
 
         {
-          stair: {title: '关于煮田', path: '/about'},
+          stair: {title: '关于煮田', path: '/about/about-introduct?index=0'},
           second: [
             {title: '煮田简介', path: '/about/about-introduct?index=0'},
             {title: '门店形象', path: '/about/about-shop?index=1'},
@@ -120,7 +103,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.$router.options.routes);
+    // console.log(this.$router.options.routes);
   },
   methods:{
     toTop (step) {
@@ -133,10 +116,6 @@ export default {
       }
     },   
   }, 
-      // 点击一级菜单切换样式
-      selectedMenu(index) {
-        this.is_selected = index
-      }
 
 
   }

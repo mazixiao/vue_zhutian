@@ -12,88 +12,97 @@
 	<div class="banner">
 	    <img src="../assets/img/aboutImg/banner.jpg" alt="">
 	</div>
-
-
 	<div class="anchor">
 	    <div :class="{item:true, active: index === 0}" @click="switchTitle(0)" >煮田简介</div>
 	    <div :class="{item:true, active: index === 1}" @click="switchTitle(1)" >门店形象</div>
 	</div>
-
-<!--         <span :class="{isActive: index === 0}" @click="switchTitle(0)">月嫂/育婴师培训</span>
-        <span :class="{isActive: index === 1}" @click="switchTitle(1)">小儿推拿师培训</span> -->
-
 	<router-view></router-view>
 
 
-<!-- 	<div class="anchor">
-	    <div :class="{item:true, introduct:true, active: anchor_active1}" @click='anchor1()'>{{anchor.tit1}}</div>
-	    <div :class="{item:true, shop:true, active: anchor_active2}" @click='anchor2()'>{{anchor.tit2}}</div>
-	</div> -->
-
-<!-- 	<div class="zhutian_introduct">
-		<div class="con_tit_s">
-			<div class="con_tit_con">{{zhutian_introduct.title}}</div>
-		</div> 
-		<div class="text">{{zhutian_introduct.text}}</div>
-		<div class="introduct_con">
-			<div class="left" @click='controlVideo()'>
-				<img class="video_img" :src="zhutian_introduct.video_img" alt="">
-				<img class="zanting_img" :src="zhutian_introduct.zanting_img" alt="">
-				<div class="shadows"></div>
-			</div>
-			<div class="right">
-				<div class="right_con">
-					<div class="item" v-for='(item, index) in zhutian_introduct.video_right'>
-						<div class="round">
-							<img :src="item[0]" alt="">
-							<div class="number">{{item[1]}}</div>
-						</div>
-						<div class="texts">{{item[2]}}</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div v-show='videoShow' class="video_con">
-	  <div class="videoss" ref="videoss">
-	    <video-player class="video-player vjs-custom-skin" ref="videoPlayer" :playsinline="true" :options="playerOptions">
-	    </video-player>
-	    <img @click='controlVideo()' class="video_close" src="../assets/img/indexImg/video_close3.png" alt="">    
-	  </div>
-	  <div @click="controlVideo()" class="video_shadow"></div>  
-	</div> -->
-
-
-<!-- 
-	<div class="shop_show">
-		<div class="shop_show_con">
-			<div class="con_tit_s">
-				<div class="con_tit_con">{{shop_show.title}}</div>
-			</div>
-			<div class="text">{{shop_show.text}}</div>
-			<div class="swiper_con">
-				<div class="swiper1">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" v-for='(item, index) in shop_show.slide'>
-							<img :src="item[0]" alt="">
-							<div class="texts">
-								<div class="round">
-									<div class="round_con">{{item[1]}}</div>
-								</div>
-								<div class="small_introduct" v-html='item[2]'></div>
-							</div>
-						</div>
-					</div>     
-				</div>   
-			</div>
-		</div>
-	</div> -->
 
 <commonFooter></commonFooter>  
 </div>
 </template>
-<script src='../assets/js/about.js'></script>
+
+
+<script>
+
+	import commonHeader2 from './header2'; 
+	import commonFooter from './footer'; 
+
+
+
+
+	export default {
+	  name: 'about',
+	  components: {
+	    commonHeader2,
+	    commonFooter,
+	  },  
+	  data () {
+	    return {
+	      anchor: {
+	        tit1: '煮田简介',
+	        tit2: '门店形象',
+	      },
+	      index: 0,
+	    }
+	  }, 
+
+	  mounted(){
+	    
+
+	  },
+
+	  created() {
+
+
+
+	  },
+
+    watch: {
+
+
+		$route: {
+			// 监听路由，给对应的tab添加高亮的样式
+			handler: function(val, oldVal) {
+				if(val.query.index) {
+					this.index = Number(val.query.index);
+				} else {
+					this.index = this.index;
+				};
+			},
+			// 对象内部的属性监听，也叫深度监听
+			deep: true,
+			// 第一次加载也执行
+			immediate: true
+		}
+
+
+
+
+    },
+
+
+	  methods:{
+	     // 切换路由
+	      switchTitle(v) {
+	        this.index = v
+	        switch (v) {
+	          case 0:
+	            this.$router.push('/about/about-introduct?index=0');
+	            break;
+	          case 1:
+	            this.$router.push('/about/about-shop?index=1');
+	            break;
+	        }
+	      }
+
+	  },
+	}	
+
+
+</script>
 
 
 
