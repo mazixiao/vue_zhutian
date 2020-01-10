@@ -9,8 +9,8 @@
 <div class="header2">
     <div class="header_con2">
       <div class="nav2">
-        <div class="item-parent" v-for='(item, index) in navs'>
-          <router-link  class="item" :to="{ path: item['stair']['path']}"  :key='index'>
+        <div class="item-parent" v-for='(item, index) in navs' @click="selectedMenu(index)">
+          <router-link  :class="{item: true, active: is_selected === index}" :to="{ path: item['stair']['path']}"  :key='index'>
           {{item['stair']['title']}}
           </router-link>
           <div class="second-parent" v-if="item.second">
@@ -56,6 +56,9 @@ export default {
   name: 'commonHeader2',
   data () {
     return {
+        // 点击的一级菜单的索引
+        is_selected: 2,
+
       navs: [
 
         {
@@ -93,6 +96,22 @@ export default {
     }
   },
 
+    watch:{
+      $route: {
+        handler(val) {
+          switch (val.path) {
+
+            case '/about/about-introduct':
+              this.is_selected = 1;
+              break;
+          }
+        },
+        deep: true,
+        immediate: true
+      }
+    },
+
+
 // stair
 // second
   props: {
@@ -101,9 +120,6 @@ export default {
       type: Number,
       default: 200  
     }
-  },
-  mounted () {
-    // console.log(this.$router.options.routes);
   },
   methods:{
     toTop (step) {
@@ -114,8 +130,20 @@ export default {
       }else {
           clearTimeout(animate);
       }
-    },   
+    },  
+
+
+      // 点击一级菜单切换样式
+      selectedMenu(index) {
+        this.is_selected = index;
+      },
+
   }, 
+
+
+
+
+
 
 
   }

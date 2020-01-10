@@ -58,8 +58,6 @@ export default new Router({
         }
 
       ]
-
-
     },
 
     {

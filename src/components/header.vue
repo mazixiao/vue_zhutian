@@ -105,9 +105,6 @@ export default {
       default: 200  
     }
   },
-  mounted () {
-    // console.log(this.$router.options.routes);
-  },
   methods:{
     toTop (step) {
       // 参数i表示间隔的幅度大小，以此来控制速度
@@ -119,6 +116,8 @@ export default {
       }
     },   
   }, 
+
+
 
 
   }

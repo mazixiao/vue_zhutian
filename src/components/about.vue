@@ -6,8 +6,8 @@
 
 <template>
 <div class='about'>
-  <!-- 公共头部 -->
-  <commonHeader2></commonHeader2>
+	<!-- 公共头部 -->
+	<commonHeader2></commonHeader2>
 
 	<div class="banner">
 	    <img src="../assets/img/aboutImg/banner.jpg" alt="">
@@ -18,9 +18,7 @@
 	</div>
 	<router-view></router-view>
 
-
-
-<commonFooter></commonFooter>  
+	<commonFooter></commonFooter>  
 </div>
 </template>
 
@@ -56,7 +54,7 @@
 
 	  created() {
 
-
+	  	console.log(this.$route, 'this.$route');
 
 	  },
 
@@ -77,9 +75,6 @@
 			// 第一次加载也执行
 			immediate: true
 		}
-
-
-
 
     },
 
