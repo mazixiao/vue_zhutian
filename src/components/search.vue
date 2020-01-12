@@ -7,7 +7,7 @@
 <template>
 <div class='search'>
 	<!-- 公共头部 -->
-	<commonHeader2></commonHeader2>
+	<commonHeader></commonHeader>
 	<div class="banner">
 	    <img src="../assets/img/searchImg/banner.jpg" alt="">
 	</div>

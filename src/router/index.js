@@ -104,7 +104,7 @@ export default new Router({
   //默认是hash模式
   mode:'history',
   //因为导航高亮的类默认是active
-  linkActiveClass:'active',  
+  // linkActiveClass:'active',  
   scrollBehavior (to, from, savedPosition) {
     //先判断目标路由有没有hash值
     if(to.hash){ 

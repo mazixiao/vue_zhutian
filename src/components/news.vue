@@ -7,7 +7,7 @@
 <template>
 <div class='news'>
   <!-- 公共头部 -->
-  <commonHeader2></commonHeader2>
+  <commonHeader></commonHeader>
 
 <div class="banner">
     <img src="../assets/img/newsImg/banner.jpg" alt="">

@@ -1,5 +1,5 @@
 
-import commonHeader2 from '../../components/header2'; 
+import commonHeader from '../../components/header'; 
 import commonFooter from '../../components/footer'; 
 
 // 4个icon
@@ -25,7 +25,7 @@ import { XImg } from 'vux'
 export default {
   name: 'join',
   components: {
-    commonHeader2,
+    commonHeader,
     commonFooter,
     XImg
   },  

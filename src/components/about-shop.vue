@@ -6,7 +6,7 @@
 <template>
 <div class='about-item1'>
   <!-- 公共头部 -->
-  <commonHeader2></commonHeader2>
+  <commonHeader></commonHeader>
 
 
   <div class="shop_show" style="margin-top: 50px">
@@ -48,7 +48,7 @@
 <script>
 
 
-import commonHeader2 from './header2'; 
+import commonHeader from './header'; 
 import commonFooter from './footer'; 
 
 import video_img from '../assets/img/aboutImg/video.jpg';
@@ -67,7 +67,7 @@ import swiper3 from '../assets/img/aboutImg/swiper3.jpg';
 export default {
   name: 'about',
   components: {
-    commonHeader2,
+    commonHeader,
     commonFooter,
   },  
   data () {

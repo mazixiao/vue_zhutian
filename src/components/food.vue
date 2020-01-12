@@ -7,7 +7,7 @@
 <template>
 <div class='food'>
   <!-- 公共头部 -->
-  <commonHeader2></commonHeader2>
+  <commonHeader></commonHeader>
 
 	<div class="banner">
 	    <img src="../assets/img/foodImg/banner.jpg" alt="">

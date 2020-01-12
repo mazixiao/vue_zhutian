@@ -1,6 +1,6 @@
 
 
-import commonHeader2 from '../../components/header2'; 
+import commonHeader from '../../components/header'; 
 import commonFooter from '../../components/footer'; 
 
 import video_img from '../img/aboutImg/video.jpg';
@@ -36,7 +36,7 @@ import { XImg } from 'vux'
 export default {
   name: 'food',
   components: {
-    commonHeader2,
+    commonHeader,
     commonFooter,
     XImg
   },  

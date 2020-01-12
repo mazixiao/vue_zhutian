@@ -1,4 +1,4 @@
-
+@
 <!-- <style scoped lang="sass">     -->
 <style lang="sass">
   @import '../assets/scss/common.scss';
@@ -64,6 +64,10 @@ export default {
     return {
       navs: [
 
+
+        {
+          stair: {title: '首页', path: '/'},
+        },
         {
           stair: {title: '招商加盟', path: '/join'},
         },

@@ -11,7 +11,7 @@
 <div class='contacts'>
 
 	<!-- 公共头部 -->
-	<commonHeader2></commonHeader2>
+	<commonHeader></commonHeader>
 	<div class="banner">
 		<img src="../assets/img/contactImg/banner.jpg" alt="">
 	</div>

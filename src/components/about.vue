@@ -7,7 +7,7 @@
 <template>
 <div class='about'>
 	<!-- 公共头部 -->
-	<commonHeader2></commonHeader2>
+	<commonHeader></commonHeader>
 
 	<div class="banner">
 	    <img src="../assets/img/aboutImg/banner.jpg" alt="">
@@ -25,7 +25,7 @@
 
 <script>
 
-	import commonHeader2 from './header2'; 
+	import commonHeader from './header'; 
 	import commonFooter from './footer'; 
 
 
@@ -34,7 +34,7 @@
 	export default {
 	  name: 'about',
 	  components: {
-	    commonHeader2,
+	    commonHeader,
 	    commonFooter,
 	  },  
 	  data () {

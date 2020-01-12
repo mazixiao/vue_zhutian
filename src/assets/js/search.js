@@ -1,6 +1,6 @@
 
 
-import commonHeader2 from '../../components/header2'; 
+import commonHeader from '../../components/header'; 
 import commonFooter from '../../components/footer'; 
 
 
@@ -17,7 +17,7 @@ import { XImg } from 'vux'
 export default {
   name: 'search',
   components: {
-    commonHeader2,
+    commonHeader,
     commonFooter,
     XImg
   },  
