@@ -20,7 +20,8 @@ export default new Router({
       name: 'index',
       component: index,
       meta: {
-        title: '首页'
+        title: '首页',
+        index: 0
       }      
     },
     {
@@ -28,7 +29,8 @@ export default new Router({
       name: 'join',
       component: join,
       meta: {
-        title: '招商加盟'
+        title: '招商加盟',
+        index: 1
       }  
     },
     {
@@ -36,24 +38,36 @@ export default new Router({
       name: 'about',
       component: about,
       meta: {
-        title: '关于煮田'
+        title: '关于煮田',
+        index: 2
       },
       children: [
         {
-          path: '/about/about-introduct',
+          path: '',
           name: 'about-introduct',
           component: aboutIntroduct,
           meta: {
-            title: '煮田简介'
+            title: '煮田简介',
+            index: 2
+          }      
+        }, 
+        {
+          path: 'about-introduct',
+          name: 'about-introduct',
+          component: aboutIntroduct,
+          meta: {
+            title: '煮田简介',
+            index: 2
           }      
         }, 
 
         {
-          path: '/about/about-shop',
+          path: 'about-shop',
           name: 'about-shop',
           component: aboutShop,
           meta: {
-            title: '门店形象'
+            title: '门店形象',
+            index: 2
           }      
         }
 
@@ -65,7 +79,8 @@ export default new Router({
       name: 'food',
       component: food,
       meta: {
-        title: '煮田美食'
+        title: '煮田美食',
+        index: 3
       }      
     },        
     {
@@ -73,7 +88,8 @@ export default new Router({
       name: 'news',
       component: news,
       meta: {
-        title: '最新资讯'
+        title: '最新资讯',
+        index: 4
       }
     }, 
     {
@@ -81,7 +97,8 @@ export default new Router({
       name: 'newsDetail',
       component: newsDetail,
       meta: {
-        title: '最新资讯详情'
+        title: '最新资讯详情',
+        index: 4
       }      
     }, 
     {
@@ -89,7 +106,8 @@ export default new Router({
       name: 'search',
       component: search,
       meta: {
-        title: '门店查询'
+        title: '门店查询',
+        index: 5
       }      
     },
     {
@@ -97,7 +115,8 @@ export default new Router({
       name: 'contact',
       component: contact,
       meta: {
-        title: '联系我们'
+        title: '联系我们',
+        index: 6
       }      
     }             
   ],

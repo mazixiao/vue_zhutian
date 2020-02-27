@@ -6,7 +6,7 @@
 <template>
 <div class='about-item1'>
   <!-- 公共头部 -->
-  <commonHeader></commonHeader>
+  <!-- <commonHeader></commonHeader> -->
 
 
   <div class="shop_show" style="margin-top: 50px">
@@ -18,7 +18,7 @@
       <div class="swiper_con">
         <div class="swiper1">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for='(item, index) in shop_show.slide'>
+            <div class="swiper-slide" v-for='(item, index) in shop_show.slide' :key="index">
               <img :src="item[0]" alt="">
               <div class="texts">
                 <div class="round">
@@ -41,7 +41,7 @@
 
 
 
-<commonFooter></commonFooter>  
+<!-- <commonFooter></commonFooter>   -->
 </div>
 </template>
 

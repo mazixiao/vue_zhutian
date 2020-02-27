@@ -2,11 +2,11 @@
 <style lang="sass">  
   @import '../assets/scss/about.scss';
 </style>
-
+ 
 <template>
 <div class='about-item1'>
   <!-- 公共头部 -->
-  <commonHeader></commonHeader>
+  <!-- <commonHeader></commonHeader> -->
 
 
   <div class="zhutian_introduct">
@@ -22,7 +22,7 @@
       </div>
       <div class="right">
         <div class="right_con">
-          <div class="item" v-for='(item, index) in zhutian_introduct.video_right'>
+          <div class="item" v-for='(item, index) in zhutian_introduct.video_right' :key="index">
             <div class="round">
               <img :src="item[0]" alt="">
               <div class="number">{{item[1]}}</div>
@@ -51,7 +51,7 @@
 
 
 
-<commonFooter></commonFooter>  
+<!-- <commonFooter></commonFooter>   -->
 </div>
 </template>
 

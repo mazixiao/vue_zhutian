@@ -12,11 +12,14 @@
 	<div class="banner">
 	    <img src="../assets/img/aboutImg/banner.jpg" alt="">
 	</div>
+	<h1>该页面其他内容</h1>
 	<div class="anchor">
 	    <div :class="{item:true, active: index === 0}" @click="switchTitle(0)" >煮田简介</div>
 	    <div :class="{item:true, active: index === 1}" @click="switchTitle(1)" >门店形象</div>
 	</div>
 	<router-view></router-view>
+
+	
 
 	<commonFooter></commonFooter>  
 </div>
@@ -49,7 +52,6 @@
 
 	  mounted(){
 	    
-
 	  },
 
 	  created() {
@@ -61,20 +63,24 @@
     watch: {
 
 
-		$route: {
-			// 监听路由，给对应的tab添加高亮的样式
-			handler: function(val, oldVal) {
-				if(val.query.index) {
-					this.index = Number(val.query.index);
-				} else {
-					this.index = this.index;
-				};
-			},
-			// 对象内部的属性监听，也叫深度监听
-			deep: true,
-			// 第一次加载也执行
-			immediate: true
-		}
+	// 	$route: {
+	// 		// 监听路由，给对应的tab添加高亮的样式
+	// 		handler: function(val, oldVal) {
+	// 			// if(val.query.index) {
+	// 			// 	this.index = Number(val.query.index);
+	// 			// } else {
+	// 			// 	this.index = this.index;
+	// 			// };
+
+	// console.log(this.$route.path, "this.$route.path");
+
+
+	// 		},
+	// 		// 对象内部的属性监听，也叫深度监听
+	// 		deep: true,
+	// 		// 第一次加载也执行
+	// 		immediate: true
+	// 	}
 
     },
 
@@ -91,7 +97,19 @@
 	            this.$router.push('/about/about-shop?index=1');
 	            break;
 	        }
-	      }
+		  },
+		  
+    checkPath() {
+      if (this.$route.path == "/printing/rawCode/ruleAdd/123") {
+        return "/printing/rawCode/rule";
+      } else if (this.$route.path == "/printing/rawCode/orderAdd/123") {
+        return "/printing/rawCode/orde";
+      } else if (this.$route.path == "/product/routerStudy/routerStudy1/router1" || this.$route.path == "/product/routerStudy/routerStudy1/router2") {
+        return "/product/routerStudy/routerStudy1";
+      }
+      return this.$route.path;
+    },
+
 
 	  },
 	}	
