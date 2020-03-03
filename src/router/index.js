@@ -48,7 +48,8 @@ export default new Router({
           component: aboutIntroduct,
           meta: {
             title: '煮田简介',
-            index: 2
+            index: 2,
+            ids: 0,
           }      
         }, 
         {
@@ -57,7 +58,8 @@ export default new Router({
           component: aboutIntroduct,
           meta: {
             title: '煮田简介',
-            index: 2
+            index: 2,
+            ids: 0,
           }      
         }, 
 
@@ -67,7 +69,8 @@ export default new Router({
           component: aboutShop,
           meta: {
             title: '门店形象',
-            index: 2
+            index: 2,
+            ids: 1,
           }      
         }
 

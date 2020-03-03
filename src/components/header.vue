@@ -1,6 +1,6 @@
 @
 <!-- <style scoped lang="sass">     -->
-<style lang="sass">
+<style lang="sass" scoped>
   @import '../assets/scss/common.scss';
 </style>
 <template>
@@ -76,10 +76,10 @@ export default {
         },
 
         {
-          stair: { title: "关于煮田", path: "/about/about-introduct?index=0" },
+          stair: { title: "关于煮田", path: "/about/about-introduct" },
           second: [
-            { title: "煮田简介", path: "/about/about-introduct?index=0" },
-            { title: "门店形象", path: "/about/about-shop?index=1" }
+            { title: "煮田简介", path: "/about/about-introduct" },
+            { title: "门店形象", path: "/about/about-shop" }
           ]
         },
 
@@ -135,7 +135,7 @@ export default {
 				// 	this.index = this.index;
 				// };
 
-	console.log(this.$route.path, "this.$route.path");
+
 
 
 			},

@@ -1,4 +1,4 @@
-<style lang="sass">
+<style lang="sass" scoped>
   @import '../assets/scss/common.scss';
 </style>
 <template>
