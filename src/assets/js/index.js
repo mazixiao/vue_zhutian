@@ -48,17 +48,17 @@ export default {
     XImg,
 
 
-    props: ['join'],
-    watch: {
-      cases() {
-        this.$nextTick(() => { // 在dom渲染完后,再执行动画
-          var wow = new WOW({
-            live: false
-          })
-          wow.init()
-        })
-      }
-    }
+    // props: ['join'],
+    // watch: {
+    //   cases() {
+    //     this.$nextTick(() => { // 在dom渲染完后,再执行动画
+    //       var wow = new WOW({
+    //         live: false
+    //       })
+    //       wow.init()
+    //     })
+    //   }
+    // }
 
   },  
 
